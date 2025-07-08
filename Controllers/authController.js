@@ -7,7 +7,7 @@ const {sendOTP  , sendPasswordResetSuccess} = require('../utils/mailer');
 const JWT_SECRET = process.env.JWT_SECRET;
 
 const isStrongPassword = (password) => {
-  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/.test(password);
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
 };
 
 // exports.signup = async (req, res) => {
